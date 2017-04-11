@@ -1,0 +1,1215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="chidren.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="chidrenStoreContainer">
+    <EntitySet Name="用户Set" EntityType="chidren.Store.用户Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="管理员Set" EntityType="chidren.Store.管理员Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="广告轮播Set" EntityType="chidren.Store.广告轮播Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="喜欢记录Set" EntityType="chidren.Store.喜欢记录Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="报名记录Set" EntityType="chidren.Store.报名记录Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="精选活动Set" EntityType="chidren.Store.精选活动Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="活动Set" EntityType="chidren.Store.活动Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="关注Set" EntityType="chidren.Store.关注Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="活动评论Set" EntityType="chidren.Store.活动评论Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="意见反馈Set" EntityType="chidren.Store.意见反馈Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="相册Set" EntityType="chidren.Store.相册Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="动态Set" EntityType="chidren.Store.动态Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="动态附件Set" EntityType="chidren.Store.动态附件Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="动态点赞记录Set" EntityType="chidren.Store.动态点赞记录Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="动态评论Set" EntityType="chidren.Store.动态评论Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="主题Set" EntityType="chidren.Store.主题Set" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="用户喜欢记录" Association="chidren.Store.用户喜欢记录">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="喜欢记录" EntitySet="喜欢记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户报名记录" Association="chidren.Store.用户报名记录">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="报名记录" EntitySet="报名记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户关注" Association="chidren.Store.用户关注">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="关注" EntitySet="关注Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户活动" Association="chidren.Store.用户活动">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="活动" EntitySet="活动Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户活动评论" Association="chidren.Store.用户活动评论">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="活动评论" EntitySet="活动评论Set" />
+    </AssociationSet>
+    <AssociationSet Name="活动精选活动" Association="chidren.Store.活动精选活动">
+      <End Role="活动" EntitySet="活动Set" />
+      <End Role="精选活动" EntitySet="精选活动Set" />
+    </AssociationSet>
+    <AssociationSet Name="活动喜欢记录" Association="chidren.Store.活动喜欢记录">
+      <End Role="活动" EntitySet="活动Set" />
+      <End Role="喜欢记录" EntitySet="喜欢记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="活动活动评论" Association="chidren.Store.活动活动评论">
+      <End Role="活动" EntitySet="活动Set" />
+      <End Role="活动评论" EntitySet="活动评论Set" />
+    </AssociationSet>
+    <AssociationSet Name="活动报名记录" Association="chidren.Store.活动报名记录">
+      <End Role="活动" EntitySet="活动Set" />
+      <End Role="报名记录" EntitySet="报名记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="动态动态附件" Association="chidren.Store.动态动态附件">
+      <End Role="动态" EntitySet="动态Set" />
+      <End Role="动态附件" EntitySet="动态附件Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户相册" Association="chidren.Store.用户相册">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="相册" EntitySet="相册Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户动态" Association="chidren.Store.用户动态">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="动态" EntitySet="动态Set" />
+    </AssociationSet>
+    <AssociationSet Name="动态动态点赞记录" Association="chidren.Store.动态动态点赞记录">
+      <End Role="动态" EntitySet="动态Set" />
+      <End Role="动态点赞记录" EntitySet="动态点赞记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户动态点赞记录" Association="chidren.Store.用户动态点赞记录">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="动态点赞记录" EntitySet="动态点赞记录Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户意见反馈" Association="chidren.Store.用户意见反馈">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="意见反馈" EntitySet="意见反馈Set" />
+    </AssociationSet>
+    <AssociationSet Name="动态动态评论" Association="chidren.Store.动态动态评论">
+      <End Role="动态" EntitySet="动态Set" />
+      <End Role="动态评论" EntitySet="动态评论Set" />
+    </AssociationSet>
+    <AssociationSet Name="用户动态评论" Association="chidren.Store.用户动态评论">
+      <End Role="用户" EntitySet="用户Set" />
+      <End Role="动态评论" EntitySet="动态评论Set" />
+    </AssociationSet>
+    <AssociationSet Name="主题活动" Association="chidren.Store.主题活动">
+      <End Role="主题" EntitySet="主题Set" />
+      <End Role="活动" EntitySet="活动Set" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="用户Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="昵称" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="密码" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="手机号" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="头像" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="类别" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="生日" Type="datetime" Nullable="false" />
+    <Property Name="地址" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="delete" Type="bit" Nullable="true" />
+    <Property Name="性别" Type="nvarchar" Nullable="false" MaxLength="4" />
+    <Property Name="个性签名" Type="nvarchar" Nullable="true" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="管理员Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="登录名" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="姓名" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="管理类型" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="管理等级" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="广告轮播Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="图片" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="活动编号" Type="bigint" Nullable="false" />
+    <Property Name="广告链接" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="广告标题" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="广告信息" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="类别" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="喜欢记录Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="喜欢时间" Type="datetime" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+    <Property Name="活动Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="报名记录Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="报名时间" Type="datetime" Nullable="false" />
+    <Property Name="是否失效" Type="bit" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+    <Property Name="活动Id" Type="int" Nullable="false" />
+    <Property Name="姓名" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="联系方式" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="精选活动Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="价格" Type="bigint" Nullable="false" />
+    <Property Name="活动Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="活动Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="标题" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="内容" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="主题图片" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="活动地址" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="开始时间" Type="datetime" Nullable="false" />
+    <Property Name="结束时间" Type="datetime" Nullable="false" />
+    <Property Name="报名截止时间" Type="datetime" Nullable="false" />
+    <Property Name="阅读人数" Type="bigint" Nullable="false" />
+    <Property Name="喜欢人数" Type="bigint" Nullable="false" />
+    <Property Name="报名人数" Type="bigint" Nullable="false" />
+    <Property Name="delete" Type="bit" Nullable="true" DefaultValue="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+    <Property Name="发起时间" Type="datetime" Nullable="true" />
+    <Property Name="主题Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="关注Set">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="好友编号" Type="int" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="活动评论Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="评论时间" Type="datetime" Nullable="false" />
+    <Property Name="内容" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="delete" Type="bit" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+    <Property Name="活动Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="意见反馈Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="内容" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="联系方式" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="相册Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="图片地址" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="动态Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="内容" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="发布时间" Type="datetime" Nullable="false" />
+    <Property Name="点赞数" Type="int" Nullable="false" />
+    <Property Name="delete" Type="bit" Nullable="true" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="动态附件Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="图片地址" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="动态Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="动态点赞记录Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="点赞时间" Type="datetime" Nullable="false" />
+    <Property Name="动态Id" Type="int" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="动态评论Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="delete" Type="bit" Nullable="true" />
+    <Property Name="内容" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="评论时间" Type="datetime" Nullable="false" />
+    <Property Name="动态Id" Type="int" Nullable="false" />
+    <Property Name="用户Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="主题Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="名称" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="图片" Type="nvarchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <Association Name="用户喜欢记录">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="喜欢记录" Type="chidren.Store.喜欢记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="喜欢记录">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户报名记录">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="报名记录" Type="chidren.Store.报名记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="报名记录">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户关注">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="关注" Type="chidren.Store.关注Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="关注">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户活动">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="活动">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户活动评论">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="活动评论" Type="chidren.Store.活动评论Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="活动评论">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="活动精选活动">
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="1" />
+    <End Role="精选活动" Type="chidren.Store.精选活动Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="活动">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="精选活动">
+        <PropertyRef Name="活动Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="活动喜欢记录">
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="1" />
+    <End Role="喜欢记录" Type="chidren.Store.喜欢记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="活动">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="喜欢记录">
+        <PropertyRef Name="活动Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="活动活动评论">
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="1" />
+    <End Role="活动评论" Type="chidren.Store.活动评论Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="活动">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="活动评论">
+        <PropertyRef Name="活动Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="活动报名记录">
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="1" />
+    <End Role="报名记录" Type="chidren.Store.报名记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="活动">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="报名记录">
+        <PropertyRef Name="活动Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="动态动态附件">
+    <End Role="动态" Type="chidren.Store.动态Set" Multiplicity="1" />
+    <End Role="动态附件" Type="chidren.Store.动态附件Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="动态">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态附件">
+        <PropertyRef Name="动态Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户相册">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="相册" Type="chidren.Store.相册Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="相册">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户动态">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="动态" Type="chidren.Store.动态Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="动态动态点赞记录">
+    <End Role="动态" Type="chidren.Store.动态Set" Multiplicity="1" />
+    <End Role="动态点赞记录" Type="chidren.Store.动态点赞记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="动态">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态点赞记录">
+        <PropertyRef Name="动态Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户动态点赞记录">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="动态点赞记录" Type="chidren.Store.动态点赞记录Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态点赞记录">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户意见反馈">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="意见反馈" Type="chidren.Store.意见反馈Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="意见反馈">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="动态动态评论">
+    <End Role="动态" Type="chidren.Store.动态Set" Multiplicity="1" />
+    <End Role="动态评论" Type="chidren.Store.动态评论Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="动态">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态评论">
+        <PropertyRef Name="动态Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="用户动态评论">
+    <End Role="用户" Type="chidren.Store.用户Set" Multiplicity="1" />
+    <End Role="动态评论" Type="chidren.Store.动态评论Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="用户">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="动态评论">
+        <PropertyRef Name="用户Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="主题活动">
+    <End Role="主题" Type="chidren.Store.主题Set" Multiplicity="1" />
+    <End Role="活动" Type="chidren.Store.活动Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="主题">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="活动">
+        <PropertyRef Name="主题Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="chidren" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="chidrenContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="用户Set" EntityType="chidren.用户" />
+          <EntitySet Name="管理员Set" EntityType="chidren.管理员" />
+          <EntitySet Name="广告轮播Set" EntityType="chidren.广告轮播" />
+          <EntitySet Name="喜欢记录Set" EntityType="chidren.喜欢记录" />
+          <EntitySet Name="报名记录Set" EntityType="chidren.报名记录" />
+          <EntitySet Name="精选活动Set" EntityType="chidren.精选活动" />
+          <EntitySet Name="活动Set" EntityType="chidren.活动" />
+          <EntitySet Name="关注Set" EntityType="chidren.关注" />
+          <EntitySet Name="活动评论Set" EntityType="chidren.活动评论" />
+          <AssociationSet Name="用户喜欢记录" Association="chidren.用户喜欢记录">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="喜欢记录" EntitySet="喜欢记录Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户报名记录" Association="chidren.用户报名记录">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="报名记录" EntitySet="报名记录Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户关注" Association="chidren.用户关注">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="关注" EntitySet="关注Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户活动" Association="chidren.用户活动">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="活动" EntitySet="活动Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户活动评论" Association="chidren.用户活动评论">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="活动评论" EntitySet="活动评论Set" />
+          </AssociationSet>
+          <AssociationSet Name="活动精选活动" Association="chidren.活动精选活动">
+            <End Role="活动" EntitySet="活动Set" />
+            <End Role="精选活动" EntitySet="精选活动Set" />
+          </AssociationSet>
+          <AssociationSet Name="活动喜欢记录" Association="chidren.活动喜欢记录">
+            <End Role="活动" EntitySet="活动Set" />
+            <End Role="喜欢记录" EntitySet="喜欢记录Set" />
+          </AssociationSet>
+          <AssociationSet Name="活动活动评论" Association="chidren.活动活动评论">
+            <End Role="活动" EntitySet="活动Set" />
+            <End Role="活动评论" EntitySet="活动评论Set" />
+          </AssociationSet>
+          <AssociationSet Name="活动报名记录" Association="chidren.活动报名记录">
+            <End Role="活动" EntitySet="活动Set" />
+            <End Role="报名记录" EntitySet="报名记录Set" />
+          </AssociationSet>
+          <EntitySet Name="意见反馈Set" EntityType="chidren.意见反馈" />
+          <EntitySet Name="相册Set" EntityType="chidren.相册" />
+          <EntitySet Name="动态Set" EntityType="chidren.动态" />
+          <EntitySet Name="动态附件Set" EntityType="chidren.动态附件" />
+          <EntitySet Name="动态点赞记录Set" EntityType="chidren.动态点赞记录" />
+          <AssociationSet Name="动态动态附件" Association="chidren.动态动态附件">
+            <End Role="动态" EntitySet="动态Set" />
+            <End Role="动态附件" EntitySet="动态附件Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户相册" Association="chidren.用户相册">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="相册" EntitySet="相册Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户动态" Association="chidren.用户动态">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="动态" EntitySet="动态Set" />
+          </AssociationSet>
+          <AssociationSet Name="动态动态点赞记录" Association="chidren.动态动态点赞记录">
+            <End Role="动态" EntitySet="动态Set" />
+            <End Role="动态点赞记录" EntitySet="动态点赞记录Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户动态点赞记录" Association="chidren.用户动态点赞记录">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="动态点赞记录" EntitySet="动态点赞记录Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户意见反馈" Association="chidren.用户意见反馈">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="意见反馈" EntitySet="意见反馈Set" />
+          </AssociationSet>
+          <EntitySet Name="动态评论Set" EntityType="chidren.动态评论" />
+          <AssociationSet Name="动态动态评论" Association="chidren.动态动态评论">
+            <End Role="动态" EntitySet="动态Set" />
+            <End Role="动态评论" EntitySet="动态评论Set" />
+          </AssociationSet>
+          <AssociationSet Name="用户动态评论" Association="chidren.用户动态评论">
+            <End Role="用户" EntitySet="用户Set" />
+            <End Role="动态评论" EntitySet="动态评论Set" />
+          </AssociationSet>
+          <EntitySet Name="主题Set" EntityType="chidren.主题" />
+          <AssociationSet Name="主题活动" Association="chidren.主题活动">
+            <End Role="主题" EntitySet="主题Set" />
+            <End Role="活动" EntitySet="活动Set" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="用户">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="昵称" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="密码" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="手机号" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="头像" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="类别" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="生日" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="地址" Type="String" Nullable="true" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="delete" Type="Boolean" Nullable="true" />
+          <NavigationProperty Name="喜欢记录" Relationship="chidren.用户喜欢记录" FromRole="用户" ToRole="喜欢记录" />
+          <NavigationProperty Name="报名记录" Relationship="chidren.用户报名记录" FromRole="用户" ToRole="报名记录" />
+          <NavigationProperty Name="好友" Relationship="chidren.用户关注" FromRole="用户" ToRole="关注" />
+          <NavigationProperty Name="活动" Relationship="chidren.用户活动" FromRole="用户" ToRole="活动" />
+          <NavigationProperty Name="活动评论" Relationship="chidren.用户活动评论" FromRole="用户" ToRole="活动评论" />
+          <NavigationProperty Name="相册" Relationship="chidren.用户相册" FromRole="用户" ToRole="相册" />
+          <NavigationProperty Name="动态" Relationship="chidren.用户动态" FromRole="用户" ToRole="动态" />
+          <NavigationProperty Name="动态点赞记录" Relationship="chidren.用户动态点赞记录" FromRole="用户" ToRole="动态点赞记录" />
+          <Property Name="性别" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="个性签名" Type="String" Nullable="true" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="意见反馈" Relationship="chidren.用户意见反馈" FromRole="用户" ToRole="意见反馈" />
+          <NavigationProperty Name="动态评论" Relationship="chidren.用户动态评论" FromRole="用户" ToRole="动态评论" />
+        </EntityType>
+        <EntityType Name="管理员">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="登录名" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="姓名" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="管理类型" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="管理等级" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="广告轮播">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="图片" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="活动编号" Type="Int64" Nullable="false" />
+          <Property Name="广告链接" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="广告标题" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="广告信息" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="类别" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="喜欢记录">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="喜欢时间" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户喜欢记录" FromRole="喜欢记录" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="活动" Relationship="chidren.活动喜欢记录" FromRole="喜欢记录" ToRole="活动" />
+          <Property Name="活动Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="报名记录">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="报名时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="是否失效" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户报名记录" FromRole="报名记录" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="活动" Relationship="chidren.活动报名记录" FromRole="报名记录" ToRole="活动" />
+          <Property Name="活动Id" Type="Int32" Nullable="false" />
+          <Property Name="姓名" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="联系方式" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="精选活动">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="价格" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="活动" Relationship="chidren.活动精选活动" FromRole="精选活动" ToRole="活动" />
+          <Property Name="活动Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="活动">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="标题" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="主题图片" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="活动地址" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="开始时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="结束时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="报名截止时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="阅读人数" Type="Int64" Nullable="false" />
+          <Property Name="喜欢人数" Type="Int64" Nullable="false" />
+          <Property Name="报名人数" Type="Int64" Nullable="false" />
+          <Property Name="delete" Type="Boolean" DefaultValue="False" Nullable="true" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户活动" FromRole="活动" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="精选活动" Relationship="chidren.活动精选活动" FromRole="活动" ToRole="精选活动" />
+          <NavigationProperty Name="喜欢记录" Relationship="chidren.活动喜欢记录" FromRole="活动" ToRole="喜欢记录" />
+          <NavigationProperty Name="活动评论" Relationship="chidren.活动活动评论" FromRole="活动" ToRole="活动评论" />
+          <NavigationProperty Name="报名记录" Relationship="chidren.活动报名记录" FromRole="活动" ToRole="报名记录" />
+          <Property Name="发起时间" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="主题" Relationship="chidren.主题活动" FromRole="活动" ToRole="主题" />
+          <Property Name="主题Id" Type="Int32" Nullable="false" />
+          </EntityType>
+        <EntityType Name="关注">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="好友编号" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户关注" FromRole="关注" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="活动评论">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="评论时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="delete" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户活动评论" FromRole="活动评论" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="活动" Relationship="chidren.活动活动评论" FromRole="活动评论" ToRole="活动" />
+          <Property Name="活动Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="用户喜欢记录">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.喜欢记录" Role="喜欢记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="喜欢记录">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户报名记录">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.报名记录" Role="报名记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="报名记录">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户关注">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.关注" Role="关注" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="关注">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户活动">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.活动" Role="活动" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="活动">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户活动评论">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.活动评论" Role="活动评论" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="活动评论">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="活动精选活动">
+          <End Type="chidren.活动" Role="活动" Multiplicity="1" />
+          <End Type="chidren.精选活动" Role="精选活动" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="活动">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="精选活动">
+              <PropertyRef Name="活动Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="活动喜欢记录">
+          <End Type="chidren.活动" Role="活动" Multiplicity="1" />
+          <End Type="chidren.喜欢记录" Role="喜欢记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="活动">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="喜欢记录">
+              <PropertyRef Name="活动Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="活动活动评论">
+          <End Type="chidren.活动" Role="活动" Multiplicity="1" />
+          <End Type="chidren.活动评论" Role="活动评论" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="活动">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="活动评论">
+              <PropertyRef Name="活动Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="活动报名记录">
+          <End Type="chidren.活动" Role="活动" Multiplicity="1" />
+          <End Type="chidren.报名记录" Role="报名记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="活动">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="报名记录">
+              <PropertyRef Name="活动Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="意见反馈">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="联系方式" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户意见反馈" FromRole="意见反馈" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="相册">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="图片地址" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户相册" FromRole="相册" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="动态">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="发布时间" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="点赞数" Type="Int32" Nullable="false" />
+          <Property Name="delete" Type="Boolean" Nullable="true" />
+          <NavigationProperty Name="动态附件" Relationship="chidren.动态动态附件" FromRole="动态" ToRole="动态附件" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户动态" FromRole="动态" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="动态点赞记录" Relationship="chidren.动态动态点赞记录" FromRole="动态" ToRole="动态点赞记录" />
+          <NavigationProperty Name="动态评论" Relationship="chidren.动态动态评论" FromRole="动态" ToRole="动态评论" />
+        </EntityType>
+        <EntityType Name="动态附件">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="图片地址" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="动态" Relationship="chidren.动态动态附件" FromRole="动态附件" ToRole="动态" />
+          <Property Name="动态Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="动态点赞记录">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="点赞时间" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="动态" Relationship="chidren.动态动态点赞记录" FromRole="动态点赞记录" ToRole="动态" />
+          <Property Name="动态Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户动态点赞记录" FromRole="动态点赞记录" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="动态动态附件">
+          <End Type="chidren.动态" Role="动态" Multiplicity="1" />
+          <End Type="chidren.动态附件" Role="动态附件" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="动态">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态附件">
+              <PropertyRef Name="动态Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户相册">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.相册" Role="相册" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="相册">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户动态">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.动态" Role="动态" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="动态动态点赞记录">
+          <End Type="chidren.动态" Role="动态" Multiplicity="1" />
+          <End Type="chidren.动态点赞记录" Role="动态点赞记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="动态">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态点赞记录">
+              <PropertyRef Name="动态Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户动态点赞记录">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.动态点赞记录" Role="动态点赞记录" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态点赞记录">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户意见反馈">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.意见反馈" Role="意见反馈" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="意见反馈">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="动态评论">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="delete" Type="Boolean" Nullable="true" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="评论时间" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="动态" Relationship="chidren.动态动态评论" FromRole="动态评论" ToRole="动态" />
+          <Property Name="动态Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="用户" Relationship="chidren.用户动态评论" FromRole="动态评论" ToRole="用户" />
+          <Property Name="用户Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="动态动态评论">
+          <End Type="chidren.动态" Role="动态" Multiplicity="1" />
+          <End Type="chidren.动态评论" Role="动态评论" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="动态">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态评论">
+              <PropertyRef Name="动态Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="用户动态评论">
+          <End Type="chidren.用户" Role="用户" Multiplicity="1" />
+          <End Type="chidren.动态评论" Role="动态评论" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="用户">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="动态评论">
+              <PropertyRef Name="用户Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="主题">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="名称" Type="String" Nullable="false" MaxLength="20" />
+          <Property Name="图片" Type="String" Nullable="false" MaxLength="250" />
+          <NavigationProperty Name="活动" Relationship="chidren.主题活动" FromRole="主题" ToRole="活动" />
+        </EntityType>
+        <Association Name="主题活动">
+          <End Type="chidren.主题" Role="主题" Multiplicity="1" />
+          <End Type="chidren.活动" Role="活动" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="主题">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="活动">
+              <PropertyRef Name="主题Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="chidrenStoreContainer" CdmEntityContainer="chidrenContainer">
+    <EntitySetMapping Name="用户Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.用户)">
+        <MappingFragment StoreEntitySet="用户Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="昵称" ColumnName="昵称" />
+          <ScalarProperty Name="密码" ColumnName="密码" />
+          <ScalarProperty Name="手机号" ColumnName="手机号" />
+          <ScalarProperty Name="头像" ColumnName="头像" />
+          <ScalarProperty Name="类别" ColumnName="类别" />
+          <ScalarProperty Name="生日" ColumnName="生日" />
+          <ScalarProperty Name="地址" ColumnName="地址" />
+          <ScalarProperty Name="delete" ColumnName="delete" />
+          <ScalarProperty Name="性别" ColumnName="性别" />
+          <ScalarProperty Name="个性签名" ColumnName="个性签名" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="管理员Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.管理员)">
+        <MappingFragment StoreEntitySet="管理员Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="登录名" ColumnName="登录名" />
+          <ScalarProperty Name="姓名" ColumnName="姓名" />
+          <ScalarProperty Name="管理类型" ColumnName="管理类型" />
+          <ScalarProperty Name="管理等级" ColumnName="管理等级" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="广告轮播Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.广告轮播)">
+        <MappingFragment StoreEntitySet="广告轮播Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="图片" ColumnName="图片" />
+          <ScalarProperty Name="活动编号" ColumnName="活动编号" />
+          <ScalarProperty Name="广告链接" ColumnName="广告链接" />
+          <ScalarProperty Name="广告标题" ColumnName="广告标题" />
+          <ScalarProperty Name="广告信息" ColumnName="广告信息" />
+          <ScalarProperty Name="类别" ColumnName="类别" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="喜欢记录Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.喜欢记录)">
+        <MappingFragment StoreEntitySet="喜欢记录Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="喜欢时间" ColumnName="喜欢时间" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+          <ScalarProperty Name="活动Id" ColumnName="活动Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="报名记录Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.报名记录)">
+        <MappingFragment StoreEntitySet="报名记录Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="报名时间" ColumnName="报名时间" />
+          <ScalarProperty Name="是否失效" ColumnName="是否失效" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+          <ScalarProperty Name="活动Id" ColumnName="活动Id" />
+          <ScalarProperty Name="姓名" ColumnName="姓名" />
+          <ScalarProperty Name="联系方式" ColumnName="联系方式" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="精选活动Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.精选活动)">
+        <MappingFragment StoreEntitySet="精选活动Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="价格" ColumnName="价格" />
+          <ScalarProperty Name="活动Id" ColumnName="活动Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="活动Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.活动)">
+        <MappingFragment StoreEntitySet="活动Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="标题" ColumnName="标题" />
+          <ScalarProperty Name="内容" ColumnName="内容" />
+          <ScalarProperty Name="主题图片" ColumnName="主题图片" />
+          <ScalarProperty Name="活动地址" ColumnName="活动地址" />
+          <ScalarProperty Name="开始时间" ColumnName="开始时间" />
+          <ScalarProperty Name="结束时间" ColumnName="结束时间" />
+          <ScalarProperty Name="报名截止时间" ColumnName="报名截止时间" />
+          <ScalarProperty Name="阅读人数" ColumnName="阅读人数" />
+          <ScalarProperty Name="喜欢人数" ColumnName="喜欢人数" />
+          <ScalarProperty Name="报名人数" ColumnName="报名人数" />
+          <ScalarProperty Name="delete" ColumnName="delete" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+          <ScalarProperty Name="发起时间" ColumnName="发起时间" />
+          <ScalarProperty Name="主题Id" ColumnName="主题Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="关注Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.关注)">
+        <MappingFragment StoreEntitySet="关注Set">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="好友编号" ColumnName="好友编号" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="活动评论Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.活动评论)">
+        <MappingFragment StoreEntitySet="活动评论Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="评论时间" ColumnName="评论时间" />
+          <ScalarProperty Name="内容" ColumnName="内容" />
+          <ScalarProperty Name="delete" ColumnName="delete" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+          <ScalarProperty Name="活动Id" ColumnName="活动Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="意见反馈Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.意见反馈)">
+        <MappingFragment StoreEntitySet="意见反馈Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="内容" ColumnName="内容" />
+          <ScalarProperty Name="联系方式" ColumnName="联系方式" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="相册Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.相册)">
+        <MappingFragment StoreEntitySet="相册Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="图片地址" ColumnName="图片地址" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="动态Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.动态)">
+        <MappingFragment StoreEntitySet="动态Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="内容" ColumnName="内容" />
+          <ScalarProperty Name="发布时间" ColumnName="发布时间" />
+          <ScalarProperty Name="点赞数" ColumnName="点赞数" />
+          <ScalarProperty Name="delete" ColumnName="delete" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="动态附件Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.动态附件)">
+        <MappingFragment StoreEntitySet="动态附件Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="图片地址" ColumnName="图片地址" />
+          <ScalarProperty Name="动态Id" ColumnName="动态Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="动态点赞记录Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.动态点赞记录)">
+        <MappingFragment StoreEntitySet="动态点赞记录Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="点赞时间" ColumnName="点赞时间" />
+          <ScalarProperty Name="动态Id" ColumnName="动态Id" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="动态评论Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.动态评论)">
+        <MappingFragment StoreEntitySet="动态评论Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="delete" ColumnName="delete" />
+          <ScalarProperty Name="内容" ColumnName="内容" />
+          <ScalarProperty Name="评论时间" ColumnName="评论时间" />
+          <ScalarProperty Name="动态Id" ColumnName="动态Id" />
+          <ScalarProperty Name="用户Id" ColumnName="用户Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="主题Set">
+      <EntityTypeMapping TypeName="IsTypeOf(chidren.主题)">
+        <MappingFragment StoreEntitySet="主题Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="名称" ColumnName="名称" />
+          <ScalarProperty Name="图片" ColumnName="图片" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

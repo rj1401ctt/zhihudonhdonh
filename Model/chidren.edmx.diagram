@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="607ee2abad024e2997b7178693238601" Name="Diagram1" ZoomLevel="72" >
+        <EntityTypeShape EntityType="chidren.用户" Width="1.5" PointX="0.625" PointY="1.125" />
+        <EntityTypeShape EntityType="chidren.管理员" Width="1.5" PointX="5.875" PointY="0.5" />
+        <EntityTypeShape EntityType="chidren.广告轮播" Width="1.5" PointX="7.875" PointY="0.5" />
+        <EntityTypeShape EntityType="chidren.喜欢记录" Width="1.5" PointX="3.875" PointY="3.5" />
+        <EntityTypeShape EntityType="chidren.报名记录" Width="1.5" PointX="1.5" PointY="6.75" />
+        <EntityTypeShape EntityType="chidren.精选活动" Width="1.5" PointX="3.125" PointY="6.75" />
+        <EntityTypeShape EntityType="chidren.活动" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="chidren.关注" Width="1.5" PointX="7.375" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="chidren.活动评论" Width="1.5" PointX="8.375" PointY="3.75" />
+        <AssociationConnector Association="chidren.用户喜欢记录" />
+        <AssociationConnector Association="chidren.用户报名记录" />
+        <AssociationConnector Association="chidren.用户关注" />
+        <AssociationConnector Association="chidren.用户活动" />
+        <AssociationConnector Association="chidren.用户活动评论" />
+        <AssociationConnector Association="chidren.活动精选活动" />
+        <AssociationConnector Association="chidren.活动喜欢记录" />
+        <AssociationConnector Association="chidren.活动活动评论" />
+        <AssociationConnector Association="chidren.活动报名记录" />
+        <EntityTypeShape EntityType="chidren.意见反馈" Width="1.5" PointX="4.25" PointY="0.625" />
+        <EntityTypeShape EntityType="chidren.相册" Width="1.5" PointX="2.75" PointY="1.25" />
+        <EntityTypeShape EntityType="chidren.动态" Width="1.5" PointX="0.5" PointY="9.875" />
+        <EntityTypeShape EntityType="chidren.动态附件" Width="1.5" PointX="0.5" PointY="13.375" />
+        <EntityTypeShape EntityType="chidren.动态点赞记录" Width="1.5" PointX="3.375" PointY="10.5" />
+        <AssociationConnector Association="chidren.动态动态附件" />
+        <AssociationConnector Association="chidren.用户相册" />
+        <AssociationConnector Association="chidren.用户动态" />
+        <AssociationConnector Association="chidren.动态动态点赞记录" />
+        <AssociationConnector Association="chidren.用户动态点赞记录" />
+        <AssociationConnector Association="chidren.用户意见反馈" />
+        <EntityTypeShape EntityType="chidren.动态评论" Width="1.5" PointX="4.625" PointY="13.125" />
+        <AssociationConnector Association="chidren.动态动态评论" />
+        <AssociationConnector Association="chidren.用户动态评论" />
+        <EntityTypeShape EntityType="chidren.主题" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="chidren.主题活动" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

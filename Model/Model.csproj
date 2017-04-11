@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1ED7A661-A0D8-4B15-A708-5C2055169148}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WZVTC.SoftDev.DDDFW.Domain">
+      <HintPath>..\DDDFW\WZVTC.SoftDev.DDDFW.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chidren.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>chidren.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chidren.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chidren.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>chidren.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="chidrenContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="主题.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="主题partial.cs" />
+    <Compile Include="关注.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="动态评论.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="动态评论partial.cs" />
+    <Compile Include="动态附件partial.cs" />
+    <Compile Include="动态点赞记录partial.cs" />
+    <Compile Include="动态partial.cs" />
+    <Compile Include="关注partial.cs" />
+    <Compile Include="动态.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="动态点赞记录.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="动态附件.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="喜欢记录.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="喜欢记录partial.cs" />
+    <Compile Include="广告轮播.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="意见反馈.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="意见反馈partial.cs" />
+    <Compile Include="报名记录.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="报名记录partial.cs" />
+    <Compile Include="活动.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="活动partial.cs" />
+    <Compile Include="活动评论.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="活动评论partial.cs" />
+    <Compile Include="用户.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="用户partial.cs" />
+    <Compile Include="相册.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="相册partial.cs" />
+    <Compile Include="管理员.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="精选活动.cs">
+      <DependentUpon>chidren.tt</DependentUpon>
+    </Compile>
+    <Compile Include="精选活动partial.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="chidren.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>chidren.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="chidren.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>chidren.Context.cs</LastGenOutput>
+      <DependentUpon>chidren.edmx</DependentUpon>
+    </None>
+    <None Include="chidren.edmx.diagram">
+      <DependentUpon>chidren.edmx</DependentUpon>
+    </None>
+    <None Include="chidren.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>chidren.cs</LastGenOutput>
+      <DependentUpon>chidren.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chidren.edmx.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

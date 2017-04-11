@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Model;
+using WZVTC.SoftDev.DDDFW.Domain.Core;
+using WZVTC.SoftDev.DDDFW.Global;
+using WZVTC.SoftDev.DDDFW.Repository;
+
+namespace Repository
+{
+    public class 报名记录Repository : BaseRepository<报名记录>, IRepository<报名记录, PageData<报名记录>>
+    {
+        public 报名记录Repository(IUnitOfWork _context) : base(_context) { }
+    }
+}
