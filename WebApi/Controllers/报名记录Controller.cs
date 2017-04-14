@@ -52,5 +52,16 @@ namespace WEBAPI.Controllers
 
             return entityServices.报名记录Service.GetSignup(u.Id);
         }
+        [HttpGet]//获取我的报名凭证
+        [Route("api/me_signup/{id}")]
+        public string me_signup(string id)
+        {
+            用户 rs = entityServices.用户Service.GetByPhome(id);
+            if (rs != null)
+            {
+                return entityServices.报名记录Service.hd_GetmeActivities(rs.Id);
+            }
+            return "0";
+        }
     }
 }
